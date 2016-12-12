@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="aa"></div>
+</body>
+<script>
+    var div =document.getElementById("aa");
+    setInterval(fn,1000);
+    function fn(){
+        var arr =["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+        var time = new Date();
+        div.innerHTML = (time.getFullYear()+"年"+(time.getMonth()+1)+"月"+time.getDate()+"日"+arr[time.getDay()]+"<br/>"+time.getHours()+"时"+time.getMinutes()+"分"+time.getSeconds()+"秒");
+
+    }
+
+</script>
+</html>

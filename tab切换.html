@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .color {
+            background-color: #940c0c;
+        }
+    </style>
+</head>
+<body>
+<button>第一个</button>
+<button>第二个</button>
+<button>第三个</button>
+<button>第四个</button>
+</body>
+<script>
+    var btn =document.getElementsByTagName("button");
+    //alert(btn.length)                 查找button总个数
+    for(var i=0;i<btn.length;i++){
+    btn[i].onclick= function(){
+        for(var i=0;i<btn.length;i++){
+            //首先清空所有的样式
+            btn[i].className = ""
+        }
+        //单独给自己样式
+        this.className = "color"
+    }
+  }
+</script>
+</html>
